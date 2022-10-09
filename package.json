@@ -2,7 +2,7 @@
   "name": "roc-scale-box",
   "version": "0.1.2",
   "author": "rocyuan",
-  "keyword": "rocyuan roc scale vue component bigScreen rocyuan666",
+  "keywords": ["scale","vue","component", "big screen", "rocyuan", "roc", "rocyuan666"],
   "description": "vue scale box",
   "main": "dist/RocScaleBox.umd.min.js",
   "scripts": {
