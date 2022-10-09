@@ -1,7 +1,6 @@
 {
   "name": "roc-scale-box",
   "version": "0.1.0",
-  "private": true,
   "author": "rocyuan",
   "keyword": "rocyuan roc scale vue bigScreen",
   "description": "vue scale box",
