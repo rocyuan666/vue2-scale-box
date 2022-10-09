@@ -61,8 +61,9 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=65359ff5&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=3df3865f&
 var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"rocScaleBox",staticClass:"roc-scale-box",style:({
+    ..._vm.style,
     width: _vm.width + 'px',
     height: _vm.height + 'px',
     backgroundColor: _vm.bgc,
@@ -102,6 +103,17 @@ var staticRenderFns = []
   data() {
     return {
       scale: 0,
+      style: {
+        position: "fixed",
+        transform: "scale(var(--scale)) translate(-50%, -50%)",
+        display: "flex",
+        flexDirection: "column",
+        transformOrigin: "0 0",
+        left: "50%",
+        top: "50%",
+        transition: "0.3s",
+        zIndex: 999,
+      },
     };
   },
   mounted() {
@@ -141,11 +153,6 @@ var staticRenderFns = []
 
 ;// CONCATENATED MODULE: ./lib/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var libvue_type_script_lang_js_ = (lib_vue_loader_options_libvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-54.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-54.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=style&index=0&id=65359ff5&prod&scoped=true&lang=css&
-// extracted by mini-css-extract-plugin
-
-;// CONCATENATED MODULE: ./lib/index.vue?vue&type=style&index=0&id=65359ff5&prod&scoped=true&lang=css&
-
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -248,18 +255,17 @@ function normalizeComponent(
 
 
 
-;
 
 
 /* normalize component */
-
+;
 var component = normalizeComponent(
   libvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
   null,
-  "65359ff5",
+  null,
   null
   
 )

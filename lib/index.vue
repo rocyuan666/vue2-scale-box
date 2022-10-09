@@ -3,6 +3,7 @@
     class="roc-scale-box"
     ref="rocScaleBox"
     :style="{
+      ...style,
       width: width + 'px',
       height: height + 'px',
       backgroundColor: bgc,
@@ -42,6 +43,17 @@ export default {
   data() {
     return {
       scale: 0,
+      style: {
+        position: "fixed",
+        transform: "scale(var(--scale)) translate(-50%, -50%)",
+        display: "flex",
+        flexDirection: "column",
+        transformOrigin: "0 0",
+        left: "50%",
+        top: "50%",
+        transition: "0.3s",
+        zIndex: 999,
+      },
     };
   },
   mounted() {
@@ -79,17 +91,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.roc-scale-box {
-  position: fixed;
-  transform: scale(var(--scale)) translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  transform-origin: 0 0;
-  left: 50%;
-  top: 50%;
-  transition: 0.3s;
-  z-index: 999;
-}
-</style>
