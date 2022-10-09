@@ -50,14 +50,12 @@ export default {
   },
   methods: {
     getScale() {
-      // 固定好16：9的宽高比，计算出最合适的缩放比
       const { width, height } = this;
       const wh = window.innerHeight / height;
       const ww = window.innerWidth / width;
       return ww < wh ? ww : wh;
     },
     setScale() {
-      // 获取到缩放比例，设置它
       this.scale = this.getScale();
       if (this.$refs.rocScaleBox) {
         this.$refs.rocScaleBox.style.setProperty("--scale", this.scale);

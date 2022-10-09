@@ -2,9 +2,10 @@
   "name": "roc-scale-box",
   "version": "0.1.0",
   "private": true,
+  "author": "rocyuan",
+  "keyword": "rocyuan roc scale vue bigScreen",
   "description": "vue scale box",
   "main": "dist/roc-scale-box.umd.min.js",
-  "keyword": "rocyuan roc-ui vue",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
@@ -21,6 +22,11 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "vue-template-compiler": "^2.6.14"
+  },
+  "homepage": "https://github.com/rocyuan666/roc-scale-box",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rocyuan666/roc-scale-box.git"
   },
   "eslintConfig": {
     "root": true,
