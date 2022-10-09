@@ -5,7 +5,7 @@
   "author": "rocyuan",
   "keyword": "rocyuan roc scale vue bigScreen",
   "description": "vue scale box",
-  "main": "dist/roc-scale-box.umd.min.js",
+  "main": "dist/RocScaleBox.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",

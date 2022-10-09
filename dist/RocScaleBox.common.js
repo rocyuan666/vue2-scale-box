@@ -51,7 +51,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=769ca07e&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=65359ff5&scoped=true&
 var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"rocScaleBox",staticClass:"roc-scale-box",style:({
     width: _vm.width + 'px',
     height: _vm.height + 'px',
@@ -100,14 +100,12 @@ var staticRenderFns = []
   },
   methods: {
     getScale() {
-      // 固定好16：9的宽高比，计算出最合适的缩放比
       const { width, height } = this;
       const wh = window.innerHeight / height;
       const ww = window.innerWidth / width;
       return ww < wh ? ww : wh;
     },
     setScale() {
-      // 获取到缩放比例，设置它
       this.scale = this.getScale();
       if (this.$refs.rocScaleBox) {
         this.$refs.rocScaleBox.style.setProperty("--scale", this.scale);
@@ -133,10 +131,10 @@ var staticRenderFns = []
 
 ;// CONCATENATED MODULE: ./lib/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var libvue_type_script_lang_js_ = (lib_vue_loader_options_libvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=style&index=0&id=769ca07e&prod&scoped=true&lang=css&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=style&index=0&id=65359ff5&prod&scoped=true&lang=css&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./lib/index.vue?vue&type=style&index=0&id=769ca07e&prod&scoped=true&lang=css&
+;// CONCATENATED MODULE: ./lib/index.vue?vue&type=style&index=0&id=65359ff5&prod&scoped=true&lang=css&
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -251,7 +249,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "769ca07e",
+  "65359ff5",
   null
   
 )
