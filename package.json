@@ -2,7 +2,15 @@
   "name": "roc-scale-box",
   "version": "0.1.3",
   "author": "rocyuan",
-  "keywords": ["scale","vue","component", "big screen", "rocyuan", "roc", "rocyuan666"],
+  "keywords": [
+    "scale",
+    "vue",
+    "component",
+    "big screen",
+    "rocyuan",
+    "roc",
+    "rocyuan666"
+  ],
   "description": "vue scale box",
   "main": "dist/RocScaleBox.umd.min.js",
   "scripts": {
@@ -11,15 +19,16 @@
     "lib": "vue-cli-service build --target lib --name RocScaleBox --dest dist lib/index.vue"
   },
   "devDependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^2.6.14",
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "core-js": "^3.8.3",
+    "echarts": "^5.4.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "vue": "^2.6.14",
     "vue-template-compiler": "^2.6.14"
   },
   "homepage": "https://github.com/rocyuan666/roc-scale-box",
