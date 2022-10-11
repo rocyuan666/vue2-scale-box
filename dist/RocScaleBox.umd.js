@@ -61,7 +61,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=3df3865f&
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=dfa39cc0&
 var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"rocScaleBox",staticClass:"roc-scale-box",style:({
     ..._vm.style,
     width: _vm.width + 'px',
@@ -93,7 +93,7 @@ var staticRenderFns = []
     },
     bgc: {
       type: String,
-      default: "rgba(4, 53, 114, 0.6)",
+      default: "transparent",
     },
     delay: {
       type: Number,

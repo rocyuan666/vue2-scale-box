@@ -33,7 +33,7 @@ export default {
     },
     bgc: {
       type: String,
-      default: "rgba(4, 53, 114, 0.6)",
+      default: "transparent",
     },
     delay: {
       type: Number,

@@ -14,7 +14,7 @@ npm install roc-scale-box
     <RocScaleBox
       :width="1920"
       :height="1080"
-      bgc="rgba(4, 53, 114, 0.6)"
+      bgc="transparent"
       :delay="100"
     >
       <template>
@@ -38,5 +38,5 @@ export default {
 ## 属性
 - ` width ` 宽度 默认 ` 1920 `
 - ` height ` 高度 默认 ` 1080 `
-- ` bgc ` 背景颜色 默认 ` "rgba(4, 53, 114, 0.6)" `
+- ` bgc ` 背景颜色 默认 ` "transparent" `
 - ` delay `自适应缩放防抖延迟时间（ms） 默认 ` 100 `

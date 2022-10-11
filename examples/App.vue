@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <RocScaleBox :width="1920" :height="1080" bgc="rgba(4, 53, 114, 0.6)" :delay="100">
+    <RocScaleBox :width="1920" :height="1080" :delay="100">
       <template>
         <div class="ec-demo" id="ec-demo"></div>
       </template>
