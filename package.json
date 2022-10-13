@@ -1,6 +1,6 @@
 {
   "name": "roc-scale-box",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "rocyuan",
   "license": "MIT",
   "keywords": [
@@ -13,11 +13,11 @@
     "rocyuan666"
   ],
   "description": "vue scale box",
-  "main": "dist/RocScaleBox.umd.min.js",
+  "main": "dist/rocScaleBox.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name RocScaleBox --dest dist lib/index.vue"
+    "lib": "vue-cli-service build --target lib --name rocScaleBox --dest dist lib/index.vue"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

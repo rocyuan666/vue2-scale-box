@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["RocScaleBox"] = factory();
+		exports["rocScaleBox"] = factory();
 	else
-		root["RocScaleBox"] = factory();
+		root["rocScaleBox"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
