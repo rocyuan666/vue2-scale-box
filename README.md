@@ -1,10 +1,14 @@
 # roc-scale-box
 
-vue大屏适配缩放组件
+vue2大屏适配缩放组件
+
+vue3版本：[https://github.com/rocyuan666/vue3-scale-box](https://github.com/rocyuan666/vue3-scale-box)
 
 ## 安装
 ```bash
 npm install roc-scale-box
+or
+yarn add roc-scale-box
 ```
 
 ## 使用
