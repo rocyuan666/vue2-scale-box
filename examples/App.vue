@@ -10,6 +10,7 @@
 
 <script>
 import * as echarts from "echarts";
+import rocTooltipShow from "roc-tooltip-show";
 import Vue2ScaleBox from "../lib/index.vue";
 export default {
   name: "App",
@@ -215,6 +216,9 @@ export default {
       };
 
       option && myChart.setOption(option);
+
+      // tooltip 自动轮播
+      rocTooltipShow(myChart, option);
     },
   },
 };
