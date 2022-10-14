@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["rocScaleBox"] = factory();
+		exports["vue2ScaleBox"] = factory();
 	else
-		root["rocScaleBox"] = factory();
+		root["vue2ScaleBox"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
@@ -61,8 +61,8 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=dfa39cc0&
-var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"rocScaleBox",staticClass:"roc-scale-box",style:({
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=4fa11b68&
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"vue2ScaleBox",staticClass:"vue2-scale-box",style:({
     ..._vm.style,
     width: _vm.width + 'px',
     height: _vm.height + 'px',
@@ -81,7 +81,7 @@ var staticRenderFns = []
  * delay      自适应缩放防抖延迟时间（ms）
  */
 /* harmony default export */ var lib_vue_loader_options_libvue_type_script_lang_js_ = ({
-  name: "RocScaleBox",
+  name: "Vue2ScaleBox",
   props: {
     width: {
       type: Number,
@@ -129,8 +129,8 @@ var staticRenderFns = []
     },
     setScale() {
       this.scale = this.getScale();
-      if (this.$refs.rocScaleBox) {
-        this.$refs.rocScaleBox.style.setProperty("--scale", this.scale);
+      if (this.$refs.vue2ScaleBox) {
+        this.$refs.vue2ScaleBox.style.setProperty("--scale", this.scale);
       }
     },
     debounce(fn, delay) {

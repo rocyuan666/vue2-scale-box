@@ -1,6 +1,6 @@
 {
-  "name": "roc-scale-box",
-  "version": "0.1.6",
+  "name": "vue2-scale-box",
+  "version": "0.1.0",
   "author": "rocyuan",
   "license": "MIT",
   "keywords": [
@@ -12,12 +12,12 @@
     "roc",
     "rocyuan666"
   ],
-  "description": "vue scale box",
-  "main": "dist/rocScaleBox.umd.min.js",
+  "description": "vue2 scale box",
+  "main": "dist/vue2ScaleBox.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name rocScaleBox --dest dist lib/index.vue"
+    "lib": "vue-cli-service build --target lib --name vue2ScaleBox --dest dist lib/index.vue"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -32,10 +32,10 @@
     "vue": "^2.6.14",
     "vue-template-compiler": "^2.6.14"
   },
-  "homepage": "https://github.com/rocyuan666/roc-scale-box",
+  "homepage": "https://github.com/rocyuan666/vue2-scale-box",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rocyuan666/roc-scale-box.git"
+    "url": "git+https://github.com/rocyuan666/vue2-scale-box.git"
   },
   "eslintConfig": {
     "root": true,

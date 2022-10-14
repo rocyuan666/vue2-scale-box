@@ -1,7 +1,7 @@
 <template>
   <div
-    class="roc-scale-box"
-    ref="rocScaleBox"
+    class="vue2-scale-box"
+    ref="vue2ScaleBox"
     :style="{
       ...style,
       width: width + 'px',
@@ -21,7 +21,7 @@
  * delay      自适应缩放防抖延迟时间（ms）
  */
 export default {
-  name: "RocScaleBox",
+  name: "Vue2ScaleBox",
   props: {
     width: {
       type: Number,
@@ -69,8 +69,8 @@ export default {
     },
     setScale() {
       this.scale = this.getScale();
-      if (this.$refs.rocScaleBox) {
-        this.$refs.rocScaleBox.style.setProperty("--scale", this.scale);
+      if (this.$refs.vue2ScaleBox) {
+        this.$refs.vue2ScaleBox.style.setProperty("--scale", this.scale);
       }
     },
     debounce(fn, delay) {

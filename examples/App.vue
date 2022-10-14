@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <RocScaleBox :width="1920" :height="1080" :delay="100">
+    <Vue2ScaleBox :width="1920" :height="1080" :delay="100">
       <template>
         <div class="ec-demo" id="ec-demo"></div>
       </template>
-    </RocScaleBox>
+    </Vue2ScaleBox>
   </div>
 </template>
 
 <script>
 import * as echarts from "echarts";
-import RocScaleBox from "../lib/index.vue";
+import Vue2ScaleBox from "../lib/index.vue";
 export default {
   name: "App",
   components: {
-    RocScaleBox,
+    Vue2ScaleBox,
   },
   mounted() {
     this.chartRender();

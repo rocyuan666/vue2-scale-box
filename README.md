@@ -1,4 +1,4 @@
-# roc-scale-box
+# vue2-scale-box
 
 vue2大屏适配缩放组件
 
@@ -6,16 +6,16 @@ vue3版本：[https://github.com/rocyuan666/vue3-scale-box](https://github.com/r
 
 ## 安装
 ```bash
-npm install roc-scale-box
+npm install vue2-scale-box
 or
-yarn add roc-scale-box
+yarn add vue2-scale-box
 ```
 
 ## 使用
 ```html
 <template>
   <div id="app">
-    <RocScaleBox
+    <ScaleBox
       :width="1920"
       :height="1080"
       bgc="transparent"
@@ -24,17 +24,17 @@ yarn add roc-scale-box
       <template>
         <h1>大屏内容</h1>
       </template>
-    </RocScaleBox>
+    </ScaleBox>
   </div>
 </template>
 ```
 
 ``` javascript
-import RocScaleBox from 'roc-scale-box'
+import ScaleBox from 'vue2-scale-box'
 
 export default {
   components: {
-    RocScaleBox
+    ScaleBox
   }
 }
 ```
