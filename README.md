@@ -2,7 +2,7 @@
 
 vue2大屏适配缩放组件
 
-vue3版本：[https://github.com/rocyuan666/vue3-scale-box](https://github.com/rocyuan666/vue3-scale-box)
+vue3版本：[https://www.npmjs.com/package/vue3-scale-box](https://www.npmjs.com/package/vue3-scale-box)
 
 ## 安装
 ```bash
