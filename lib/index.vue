@@ -15,10 +15,11 @@
 
 <script>
 /**
- * width      宽
- * height     高
- * bgc        背景颜色
- * delay      自适应缩放防抖延迟时间（ms）
+ * width        宽
+ * height       高
+ * bgc          背景颜色
+ * delay        自适应缩放防抖延迟时间（ms）
+ * @scaleChange 缩放值发生改变的方法 可动态获取 scale 改变后的值
  */
 export default {
   name: "Vue2ScaleBox",
@@ -55,6 +56,14 @@ export default {
         zIndex: 999,
       },
     };
+  },
+  watch: {
+    scale: {
+      handler(scale) {
+        this.$emit("scaleChange", scale);
+      },
+      immediate: true,
+    },
   },
   mounted() {
     this.setScale();

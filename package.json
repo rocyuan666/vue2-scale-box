@@ -1,6 +1,6 @@
 {
   "name": "vue2-scale-box",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "rocyuan",
   "license": "MIT",
   "keywords": [
@@ -20,6 +20,7 @@
     "lib": "vue-cli-service build --target lib --name vue2ScaleBox --dest dist lib/index.vue"
   },
   "devDependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "~5.0.0",
