@@ -61,7 +61,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=4fa11b68&
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=f1e31378&
 var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"vue2ScaleBox",staticClass:"vue2-scale-box",style:({
     ..._vm.style,
     width: _vm.width + 'px',
@@ -75,10 +75,11 @@ var staticRenderFns = []
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=script&lang=js&
 
 /**
- * width      宽
- * height     高
- * bgc        背景颜色
- * delay      自适应缩放防抖延迟时间（ms）
+ * width        宽
+ * height       高
+ * bgc          背景颜色
+ * delay        自适应缩放防抖延迟时间（ms）
+ * @scaleChange 缩放值发生改变的方法 可动态获取 scale 改变后的值
  */
 /* harmony default export */ var lib_vue_loader_options_libvue_type_script_lang_js_ = ({
   name: "Vue2ScaleBox",
@@ -115,6 +116,14 @@ var staticRenderFns = []
         zIndex: 999,
       },
     };
+  },
+  watch: {
+    scale: {
+      handler(scale) {
+        this.$emit("scaleChange", scale);
+      },
+      immediate: true,
+    },
   },
   mounted() {
     this.setScale();
