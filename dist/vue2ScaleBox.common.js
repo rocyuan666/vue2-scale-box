@@ -51,7 +51,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=f1e31378&
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=f0de866e&
 var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"vue2ScaleBox",staticClass:"vue2-scale-box",style:({
     ..._vm.style,
     width: _vm.width + 'px',
@@ -102,7 +102,6 @@ var staticRenderFns = []
         transformOrigin: "0 0",
         left: "50%",
         top: "50%",
-        transition: "0.3s",
         zIndex: 999,
       },
     };
