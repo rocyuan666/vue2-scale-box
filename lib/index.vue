@@ -19,6 +19,7 @@
  * height       高
  * bgc          背景颜色
  * delay        自适应缩放防抖延迟时间（ms）
+ * isFlat       是否启用拉伸模式
  * @scaleChange 缩放值发生改变的方法 可动态获取 scale 改变后的值
  */
 export default {
@@ -40,10 +41,16 @@ export default {
       type: Number,
       default: 100,
     },
+    isFlat: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
       scale: 0,
+      scaleX: 0,
+      scaleY: 0,
       style: {
         position: "fixed",
         transform: "scale(var(--scale)) translate(-50%, -50%)",
@@ -54,10 +61,26 @@ export default {
       },
     };
   },
+  created() {
+    if (this.isFlat) {
+      // 拉伸模式
+      this.style["transform"] =
+        "scaleX(var(--scaleX)) scaleY(var(--scaleY)) translate(-50%, -50%)";
+    } else {
+      // 等比缩放模式
+      this.style["transform"] = "scale(var(--scale)) translate(-50%, -50%)";
+    }
+  },
   watch: {
     scale: {
       handler(scale) {
-        this.$emit("scaleChange", scale);
+        let args;
+        if (this.isFlat) {
+          args = [this.scaleX, this.scaleY];
+        } else {
+          args = scale;
+        }
+        this.$emit("scaleChange", args);
       },
       immediate: true,
     },
@@ -73,10 +96,28 @@ export default {
       const ww = window.innerWidth / width;
       return ww < wh ? ww : wh;
     },
+    getScaleX() {
+      const ww = window.innerWidth / this.width;
+      return ww;
+    },
+    getScaleY() {
+      const wh = window.innerHeight / this.height;
+      return wh;
+    },
     setScale() {
       this.scale = this.getScale();
       if (this.$refs.vue2ScaleBox) {
-        this.$refs.vue2ScaleBox.style.setProperty("--scale", this.scale);
+        if (this.isFlat) {
+          // 拉伸模式
+          this.scaleX = this.getScaleX();
+          this.scaleY = this.getScaleY();
+          this.$refs.vue2ScaleBox.style.setProperty("--scaleX", this.scaleX);
+          this.$refs.vue2ScaleBox.style.setProperty("--scaleY", this.scaleY);
+        } else {
+          // 等比缩放模式
+          this.scale = this.getScale();
+          this.$refs.vue2ScaleBox.style.setProperty("--scale", this.scale);
+        }
       }
     },
     debounce(fn, delay) {
