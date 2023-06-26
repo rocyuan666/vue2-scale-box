@@ -61,7 +61,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=1ea230d0&
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./lib/index.vue?vue&type=template&id=efd47572&
 var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"vue2ScaleBox",staticClass:"vue2-scale-box",style:({
     ..._vm.style,
     width: _vm.width + 'px',
@@ -79,6 +79,7 @@ var staticRenderFns = []
  * height       高
  * bgc          背景颜色
  * delay        自适应缩放防抖延迟时间（ms）
+ * isFlat       是否启用拉伸模式
  * @scaleChange 缩放值发生改变的方法 可动态获取 scale 改变后的值
  */
 /* harmony default export */ var lib_vue_loader_options_libvue_type_script_lang_js_ = ({
@@ -100,10 +101,16 @@ var staticRenderFns = []
       type: Number,
       default: 100,
     },
+    isFlat: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
       scale: 0,
+      scaleX: 0,
+      scaleY: 0,
       style: {
         position: "fixed",
         transform: "scale(var(--scale)) translate(-50%, -50%)",
@@ -114,10 +121,26 @@ var staticRenderFns = []
       },
     };
   },
+  created() {
+    if (this.isFlat) {
+      // 拉伸模式
+      this.style["transform"] =
+        "scaleX(var(--scaleX)) scaleY(var(--scaleY)) translate(-50%, -50%)";
+    } else {
+      // 等比缩放模式
+      this.style["transform"] = "scale(var(--scale)) translate(-50%, -50%)";
+    }
+  },
   watch: {
     scale: {
       handler(scale) {
-        this.$emit("scaleChange", scale);
+        let args;
+        if (this.isFlat) {
+          args = [this.scaleX, this.scaleY];
+        } else {
+          args = scale;
+        }
+        this.$emit("scaleChange", args);
       },
       immediate: true,
     },
@@ -133,10 +156,28 @@ var staticRenderFns = []
       const ww = window.innerWidth / width;
       return ww < wh ? ww : wh;
     },
+    getScaleX() {
+      const ww = window.innerWidth / this.width;
+      return ww;
+    },
+    getScaleY() {
+      const wh = window.innerHeight / this.height;
+      return wh;
+    },
     setScale() {
       this.scale = this.getScale();
       if (this.$refs.vue2ScaleBox) {
-        this.$refs.vue2ScaleBox.style.setProperty("--scale", this.scale);
+        if (this.isFlat) {
+          // 拉伸模式
+          this.scaleX = this.getScaleX();
+          this.scaleY = this.getScaleY();
+          this.$refs.vue2ScaleBox.style.setProperty("--scaleX", this.scaleX);
+          this.$refs.vue2ScaleBox.style.setProperty("--scaleY", this.scaleY);
+        } else {
+          // 等比缩放模式
+          this.scale = this.getScale();
+          this.$refs.vue2ScaleBox.style.setProperty("--scale", this.scale);
+        }
       }
     },
     debounce(fn, delay) {

@@ -23,6 +23,7 @@ yarn add vue2-scale-box
       :height="1080"
       bgc="transparent"
       :delay="100"
+      :isFlat="false"
     >
       <template>
         <h1>大屏内容</h1>
@@ -47,4 +48,5 @@ export default {
 - ` height ` 高度 默认 ` 1080 `
 - ` bgc ` 背景颜色 默认 ` "transparent" `
 - ` delay `自适应缩放防抖延迟时间（ms） 默认 ` 100 `
-- ` @scaleChange `  缩放值发生改变的方法 可动态获取 scale 改变后的值
+- ` isFlat `是否启用拉伸模式 默认 ` false `
+- ` @scaleChange `  缩放值发生改变的方法 可动态获取 scale 改变后的值  注意：拉伸模式下scale值为： ` [x缩放值, y缩放值] `；非拉伸模式下scale值为：` 等比缩放值 `
